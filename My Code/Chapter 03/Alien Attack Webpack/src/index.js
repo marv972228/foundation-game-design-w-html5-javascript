@@ -3,12 +3,11 @@ import { alien, missile, explosion, output } from "./gameObjects";
 import { render } from "./render";
 import { endGame } from "./endGame";
 
-
 export function playGame() {
   state.shotsRemaining = state.shotsRemaining - 1;
   state.shotsMade = state.shotsMade + 1;
-  state.gameState = " Shots: " + state.shotsMade + ", Remaining: " + state.shotsRemaining;
-
+  state.gameState =
+    " Shots: " + state.shotsMade + ", Remaining: " + state.shotsRemaining;
 
   //Find out whether the player's x and y guesses are inside
   //The alien's area
@@ -50,4 +49,3 @@ export function playGame() {
   render();
   console.log(`X: ${state.alienX} Y: ${state.alienY}`);
 }
-
